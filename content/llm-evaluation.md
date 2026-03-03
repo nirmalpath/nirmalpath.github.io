@@ -6,6 +6,7 @@
 - Faithfulness
 - Latency
 - Cost per 1K tokens
+- Test
 
 ## Example Code
 
