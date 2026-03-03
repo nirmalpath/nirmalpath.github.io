@@ -12,7 +12,7 @@
 This is a sample to test if the hyperlink works
 
 ## Mindmap
-![ML MindMap](content/ML.png)
+![ML MindMap](ML.png)
 
 ## Example Code
 
