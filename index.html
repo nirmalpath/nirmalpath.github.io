@@ -10,25 +10,24 @@
     
     <!-- LEFT: Tree Navigation -->
     <div class="sidebar">
-    <h2>AI Knowledge</h2>
-    <ul class="tree">
-        <li>
-            <span class="toggle">▶</span> AI Strategy
-            <ul>
-                <li data-page="content/ai-strategy.html">Enterprise AI</li>
-            </ul>
-        </li>
+        <h2>Topics</h2>
+        <ul class="tree">
+            <li>
+                AI Strategy
+                <ul>
+                    <li onclick="loadContent('content/ai-strategy.html')">Enterprise AI</li>
+                </ul>
+            </li>
+            <li>
+                LLM
+                <ul>
+                    <li onclick="loadContent('content/llm-evaluation.html')">Evaluation Framework</li>
+                    <li onclick="loadContent('content/agentic-ai.html')">Agentic AI</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
 
-        <li>
-            <span class="toggle">▶</span> LLM
-            <ul>
-                <li data-page="content/llm-evaluation.html">Evaluation</li>
-                <li data-page="content/agentic-ai.html">Agentic AI</li>
-            </ul>
-        </li>
-    </ul>
-</div>
-    
     <!-- RIGHT: Content Area -->
     <div class="content" id="content-area">
         <h1>Welcome</h1>
@@ -47,25 +46,7 @@ function loadContent(page) {
         .catch(error => {
             document.getElementById("content-area").innerHTML = "<p>Error loading content.</p>";
         });
-    
-document.querySelectorAll(".toggle").forEach(toggle => {
-    toggle.addEventListener("click", function() {
-        let sublist = this.parentElement.querySelector("ul");
-        if (sublist.style.display === "block") {
-            sublist.style.display = "none";
-            this.textContent = "▶";
-        } else {
-            sublist.style.display = "block";
-            this.textContent = "▼";
-        }
-    });
-});
-
-document.querySelectorAll("[data-page]").forEach(item => {
-    item.addEventListener("click", function() {
-        loadContent(this.dataset.page);
-    });
-});
+}
 </script>
 
 </body>
