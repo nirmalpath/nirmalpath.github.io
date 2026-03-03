@@ -6,7 +6,7 @@
 - Faithfulness
 - Latency
 - Cost per 1K tokens
-- Test2
+- Test3
 
 ## Accuracy
 This is a sample to test if the hyperlink works
