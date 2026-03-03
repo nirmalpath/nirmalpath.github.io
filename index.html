@@ -1,41 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Nirmal's Blog</title>
-    <style>
-        body {
-            font-family: Arial;
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-        }
-        h1 {
-            color: #333;
-        }
-        .post {
-            margin-bottom: 40px;
-        }
-        .date {
-            color: gray;
-            font-size: 14px;
-        }
-    </style>
+    <title>AI Knowledge Blog</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Welcome to My Blog</h1>
+<div class="container">
+    
+    <!-- LEFT: Tree Navigation -->
+    <div class="sidebar">
+        <h2>Topics</h2>
+        <ul class="tree">
+            <li>
+                AI Strategy
+                <ul>
+                    <li onclick="loadContent('content/ai-strategy.html')">Enterprise AI</li>
+                </ul>
+            </li>
+            <li>
+                LLM
+                <ul>
+                    <li onclick="loadContent('content/llm-evaluation.html')">Evaluation Framework</li>
+                    <li onclick="loadContent('content/agentic-ai.html')">Agentic AI</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
 
-<div class="post">
-    <h2>My First Post</h2>
-    <p class="date">March 2026</p>
-    <p>This is my first blog post hosted on GitHub Pages.</p>
+    <!-- RIGHT: Content Area -->
+    <div class="content" id="content-area">
+        <h1>Welcome</h1>
+        <p>Select a topic from the left.</p>
+    </div>
+
 </div>
 
-<div class="post">
-    <h2>AI Strategy in IT</h2>
-    <p class="date">March 2026</p>
-    <p>Thoughts on implementing AI in enterprise IT teams...</p>
-</div>
+<script>
+function loadContent(page) {
+    fetch(page)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("content-area").innerHTML = data;
+        })
+        .catch(error => {
+            document.getElementById("content-area").innerHTML = "<p>Error loading content.</p>";
+        });
+}
+</script>
 
 </body>
 </html>
