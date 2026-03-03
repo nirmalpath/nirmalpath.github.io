@@ -13,3 +13,11 @@
 ```python
 def evaluate(model, dataset):
     return model.score(dataset)
+
+
+graph LR
+User --> LLM
+LLM --> Retriever
+Retriever --> VectorDB
+VectorDB --> Retriever
+
