@@ -18,9 +18,9 @@
 - Common Interview Questions
 
 ### Types
-A) Supervised
-  a. Regression
-  b. Classification
+1. Supervised
+  1. Regression
+  2. Classification
 
 B) Unsupervised
   a. Clustering
