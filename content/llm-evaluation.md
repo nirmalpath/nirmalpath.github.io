@@ -6,13 +6,13 @@
 - Faithfulness
 - Latency
 - Cost per 1K tokens
-- Test3
+- Test4
 
 ## Accuracy
 This is a sample to test if the hyperlink works
 
 ## Mindmap
-![ML MindMap](ML.png)
+![ML MindMap](ML.png.png)
 
 ## Example Code
 
