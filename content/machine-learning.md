@@ -17,10 +17,7 @@
 - Production Checklist
 - Common Interview Questions
 
-## Mindmap
-![ML MindMap](content/ML.png.png)
-
-## Types
+### Types
 A) Supervised
   a. Regression
   b. Classification
@@ -31,10 +28,27 @@ B) Unsupervised
   c. Association Rules
     - Market Basket Analysis
 
-
-## Example Code
-
-```python
-def evaluate(model, dataset):
-    return model.score(dataset)
-
+### Core Algorithm
+A) Linear
+  a. Linear Regression
+    Loss: MSE
+  b. Logistic Regression
+    Sigmoid Function
+    Log Loss
+B) Tree Based
+  a. Decision Tree
+    Gini
+    Entropy
+  b. Random Forest
+    Ensemble
+    Reduces Variance
+  c. XGBoost
+    Gradient Boost
+    Regularized
+C) Distance Based
+  KNN: Lazy learner / Sensitive to scale
+D) Margin Based
+  Support Vector Machines: Maximizes margin / Kernel trick
+E) Clustering
+  KMeans: Minimize within cluster variance / requires K
+  DBScan: Density based
