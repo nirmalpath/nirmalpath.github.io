@@ -1,75 +1,196 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>AI Knowledge Blog</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>AI Research Notebook</title>
+
+<!-- MARKDOWN -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<!-- SYNTAX HIGHLIGHT -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/github-dark.css">
+<script src="https://cdn.jsdelivr.net/npm/highlight.js/lib/common.min.js"></script>
+
+<!-- MERMAID -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+
+<style>
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #0f1117;
+    color: #e6edf3;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 280px;
+    background: #161b22;
+    padding: 20px;
+    overflow-y: auto;
+    border-right: 1px solid #30363d;
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    margin-top: 0;
+    color: #58a6ff;
+}
+
+.sidebar input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    background: #0f1117;
+    border: 1px solid #30363d;
+    color: white;
+    border-radius: 6px;
+}
+
+/* TREE */
+.tree {
+    list-style: none;
+    padding-left: 10px;
+}
+
+.tree li {
+    margin: 6px 0;
+    cursor: pointer;
+}
+
+.tree ul {
+    list-style: none;
+    padding-left: 15px;
+    display: none;
+}
+
+.toggle {
+    margin-right: 6px;
+    color: #8b949e;
+}
+
+/* CONTENT */
+.content {
+    flex: 1;
+    padding: 50px;
+    overflow-y: auto;
+}
+
+.content h1 {
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 10px;
+}
+
+.content pre {
+    background: #161b22;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+a {
+    color: #58a6ff;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+</style>
 </head>
+
 <body>
-
 <div class="container">
-    
-    <!-- LEFT: Tree Navigation -->
-    <div class="sidebar">
-        <h2>AI Knowledge</h2>
-        <ul class="tree">
-            <li>
-                <span class="toggle">▶</span> AI Strategy
-                <ul>
-                    <li data-page="content/ai-strategy.html">Enterprise AI</li>
-                </ul>
-            </li>
-    
-            <li>
-                <span class="toggle">▶</span> LLM
-                <ul>
-                    <li data-page="content/llm-evaluation.html">Evaluation</li>
-                    <li data-page="content/agentic-ai.html">Agentic AI</li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-        
 
-    <!-- RIGHT: Content Area -->
-    <div class="content" id="content-area">
-        <h1>Welcome</h1>
-        <p>Select a topic from the left.</p>
-    </div>
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <h2>AI Notebook</h2>
+
+    <input type="text" id="search" placeholder="Search...">
+
+    <ul class="tree">
+        <li>
+            <span class="toggle">▶</span> Strategy
+            <ul>
+                <li data-page="ai-strategy">Enterprise AI</li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="toggle">▶</span> LLM
+            <ul>
+                <li data-page="llm-evaluation">Evaluation</li>
+                <li data-page="agentic-ai">Agentic AI</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<!-- CONTENT -->
+<div class="content" id="content-area">
+    <h1>Welcome</h1>
+    <p>Select a topic from the left.</p>
+</div>
 
 </div>
 
 <script>
-function loadContent(page) {
-    fetch(page)
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("content-area").innerHTML = data;
-        })
-        .catch(error => {
-            document.getElementById("content-area").innerHTML = "<p>Error loading content.</p>";
-        });
-}
-</script>
+mermaid.initialize({ startOnLoad: true });
 
-<script>
+// COLLAPSIBLE TREE
 document.querySelectorAll(".toggle").forEach(toggle => {
-    toggle.addEventListener("click", function() {
-        let sublist = this.parentElement.querySelector("ul");
-        if (sublist.style.display === "block") {
-            sublist.style.display = "none";
+    toggle.addEventListener("click", function () {
+        let sub = this.parentElement.querySelector("ul");
+        if (sub.style.display === "block") {
+            sub.style.display = "none";
             this.textContent = "▶";
         } else {
-            sublist.style.display = "block";
+            sub.style.display = "block";
             this.textContent = "▼";
         }
     });
 });
 
-document.querySelectorAll("[data-page]").forEach(item => {
-    item.addEventListener("click", function() {
-        loadContent(this.dataset.page);
+// SEARCH
+document.getElementById("search").addEventListener("keyup", function () {
+    let filter = this.value.toLowerCase();
+    document.querySelectorAll("[data-page]").forEach(item => {
+        item.style.display = item.textContent.toLowerCase().includes(filter)
+            ? "block"
+            : "none";
     });
 });
+
+// LOAD CONTENT
+function loadContent(page) {
+    fetch("content/" + page + ".md")
+        .then(res => res.text())
+        .then(text => {
+            document.getElementById("content-area").innerHTML = marked.parse(text);
+            hljs.highlightAll();
+            mermaid.init(undefined, document.querySelectorAll(".language-mermaid"));
+        });
+}
+
+// CLICK HANDLER
+document.querySelectorAll("[data-page]").forEach(item => {
+    item.addEventListener("click", function () {
+        window.location.hash = this.dataset.page;
+    });
+});
+
+// ROUTING
+function loadFromHash() {
+    let hash = window.location.hash.substring(1);
+    if (hash) loadContent(hash);
+}
+
+window.addEventListener("hashchange", loadFromHash);
+window.addEventListener("load", loadFromHash);
 </script>
 
 </body>
