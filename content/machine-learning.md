@@ -19,14 +19,14 @@
 
 ### Types
 1. Supervised
-  1. Regression
-  2. Classification
+- Regression
+- Classification
 
-B) Unsupervised
-  a. Clustering
-  b. Dimension Reduction
-  c. Association Rules
-    - Market Basket Analysis
+2. Unsupervised
+- Clustering
+- Dimension Reduction
+- Association Rules
+-   Market Basket Analysis
 
 ### Core Algorithm
 A) Linear
