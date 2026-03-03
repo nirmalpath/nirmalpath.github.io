@@ -26,7 +26,10 @@
 - Clustering
 - Dimension Reduction
 - Association Rules
--   Market Basket Analysis
+<div style="margin-left:20px;">
+Market Basket Analysis
+</div>
+
 
 ### Core Algorithm
 A) Linear
