@@ -26,7 +26,7 @@
 - Clustering
 - Dimension Reduction
 - Association Rules
-<div style="margin-left:20px;">
+<div style="margin-left:120px;">
 Market Basket Analysis
 </div>
 
