@@ -11,6 +11,9 @@
 ## Accuracy
 This is a sample to test if the hyperlink works
 
+## Mindmap
+![ML MindMap](content/Machine Learning.png)
+
 ## Example Code
 
 ```python
