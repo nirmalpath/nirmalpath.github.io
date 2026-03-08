@@ -19,10 +19,14 @@
 
 ### Probability Foundation
 1. Random Variable
+<div style="margin-left:50px;">
 - Discrete vs Continuous
+</div>
+<div style="margin-left:75px;">
 - PDF (cont)
 - PMF (discrete)
 - CDF
+</div>
 2. Expected Value
 3. Variance
 4. Covariance n Correlation
