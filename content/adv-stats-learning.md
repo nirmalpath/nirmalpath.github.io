@@ -24,7 +24,11 @@
 </div>
 <div style="margin-left:75px;">
 - PDF (cont)
+</div>
+<div style="margin-left:75px;">
 - PMF (discrete)
+</div>
+<div style="margin-left:75px;">
 - CDF
 </div>
 2. Expected Value
