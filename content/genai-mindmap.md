@@ -1,2 +1,2 @@
 ## Mindmap
-![AgentAI MindMap](content/Agentic-AI.png)
+![GenAI MindMap](content/Gen-AI.png)
