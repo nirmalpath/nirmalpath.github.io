@@ -74,9 +74,32 @@
 </div>
 
 ### CLT
+- For Large N
+ 
 ### Hypothesis Testing
+1. Test Stats
+   - Z-test (large sample)
+   - T-test (small sample)
+2. Likelihood Ratio Test
+3. Power of Test
+   - Sample size
+   - Effect size
+   - Var
+   - Significance Level
+     
 ### Confidence Intervals
+
 ### Max Likelihood Estimation
+1. Procedure
+   - Write Likelihood
+   - Take Log
+   - Differentiate
+   - Solve
+2. Properties
+   - Consistent
+   - Asymptotically Normal
+   - Efficient
+   
 ### Bayesian Stats
 ### Regression
 ### ANOVA
