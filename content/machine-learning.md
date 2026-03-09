@@ -2,7 +2,6 @@
 
 ## Topics
 
-- [Go to Accuracy](#accuracy)
 - Types
 - Core Algorithm
 - Bias-Variance Tradeoff
@@ -19,8 +18,23 @@
 
 ### Types
 1. Supervised
-- Regression
-- Classification
+- Regression:
+  Definition: ML technique that learns from labeled data to predict continuous numerical values.
+  More: Fitting a line or curve thru data points.
+  Example: House Price / Temperature / Sales Revenue / Stock Price / Time to failure / Demand Forecasting / Credit Risk / Pricing Models / Energy Consumption / Healthcare Risk
+  Steps: Collect Training Data -> Train a Model -> Minimize Error (MSE/MAE).
+  Common Algorithm's: Linear / Ridge / Lasso / Decision Tree / Random Forest / Support Vector / Neural Network
+  
+- Classification:
+  Definition: ML technique to predict a category (class label) from labelled input data.
+  More: Model learns f(X)Class
+  Types:
+    Binary (spam/not, disease/healthy) using logistic regression
+    Multiclass (multiple images) using Decision Tree / Random Forest / Support Vector Machine / Naive Bayes / Neural Network
+  Example: Predict spam email / Fraud detection / Medical diagnosis / Sentiment analysis / Document classification / Image Recognition
+  Steps: Training Data (Age, Income, Credit Score leads to approve/reject decision) -> Learn Decision Boundary (separating classes, income greater than 50k approve) -> Prediction
+  Evaluation Metrics: Accuracy / Precision / Recall / F1 Score / ROC-AUC --> leads to confusion matrix
+  
 
 2. Unsupervised
 - Clustering
