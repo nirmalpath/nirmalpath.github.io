@@ -17,7 +17,7 @@
 - Common Interview Questions
 
 ### Types
-1. Supervised
+1. **Supervised**
     - Regression:
         - Definition: ML technique that learns from labeled data to predict continuous numerical values.
         - More: Fitting a line or curve thru data points.
@@ -36,7 +36,7 @@
         - Evaluation Metrics: Accuracy / Precision / Recall / F1 Score / ROC-AUC --> leads to confusion matrix
   
 
-2. Unsupervised
+2. **Unsupervised**
     - Clustering
         - Definition: Learning method that automatically groups similar data points without predefined labels
         - Example:
