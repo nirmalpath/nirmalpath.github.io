@@ -18,12 +18,12 @@
 
 ### Types
 1. Supervised
-- Regression:
--   Definition: ML technique that learns from labeled data to predict continuous numerical values.
--   More: Fitting a line or curve thru data points.
--   Example: House Price / Temperature / Sales Revenue / Stock Price / Time to failure / Demand Forecasting / Credit Risk / Pricing Models / Energy Consumption / Healthcare Risk
--   Steps: Collect Training Data -> Train a Model -> Minimize Error (MSE/MAE).
--   Common Algorithm's: Linear / Ridge / Lasso / Decision Tree / Random Forest / Support Vector / Neural Network
+    - Regression:
+        - Definition: ML technique that learns from labeled data to predict continuous numerical values.
+        - More: Fitting a line or curve thru data points.
+        - Example: House Price / Temperature / Sales Revenue / Stock Price / Time to failure / Demand Forecasting / Credit Risk / Pricing Models / Energy Consumption / Healthcare Risk
+        - Steps: Collect Training Data -> Train a Model -> Minimize Error (MSE/MAE).
+        - Common Algorithm's: Linear / Ridge / Lasso / Decision Tree / Random Forest / Support Vector / Neural Network
   
 - Classification:
   Definition: ML technique to predict a category (class label) from labelled input data.
