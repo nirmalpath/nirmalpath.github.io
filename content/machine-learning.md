@@ -37,13 +37,19 @@
   
 
 2. Unsupervised
-- Clustering
-- Dimension Reduction
-- Association Rules
-<div style="margin-left:120px;">
-Market Basket Analysis
-</div>
-
+    - Clustering
+        - Definition: Learning method that automatically groups similar data points without predefined labels
+        - Example:
+            - Creating clusters based on Age, Income n Spending habits (customer segmentation), Document clustering (similar articles), Image segmentation (grouping pixels with similar color), Anomaly detection (fraud)
+            - In AI/LLM: vector embedding, topic discovery, document org in RAG
+        - Common Algorithm's:
+            - K-Means: Most commonly used, K has to be specified beforehand / Steps: Choose K cluster centers -> Assign each datapoint to nearest center -> recalc cluster centers -> Repeat until stable
+            - DBSCAN: Groups dense regions / good for outlier detection / does not require K beforehand
+            - Hierarchical: Builds tree like structure / 2 approaches - Agglomerative (bottom-up / start with each point as cluster and then progressively merge) and Divisive (top-down / start with one cluster and progressively split)
+              
+    - Dimension Reduction
+      
+    - Association Rules
 
 ### Core Algorithm
 A) Linear
