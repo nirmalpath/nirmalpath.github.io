@@ -15,7 +15,7 @@
 - Model Selection
 - Production Checklist
 - Common Interview Questions
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### Types
 1. **Supervised**
     - Regression:
@@ -35,7 +35,6 @@
         - Steps: Training Data (Age, Income, Credit Score leads to approve/reject decision) -> Learn Decision Boundary (separating classes, income greater than 50k approve) -> Prediction
         - Evaluation Metrics: Accuracy / Precision / Recall / F1 Score / ROC-AUC --> leads to confusion matrix
   
-
 2. **Unsupervised**
     - Clustering
         - Definition: Learning method that automatically groups similar data points without predefined labels
@@ -51,27 +50,37 @@
       
     - Association Rules
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### Core Algorithm
-A) Linear
-  a. Linear Regression
-    Loss: MSE
-  b. Logistic Regression
-    Sigmoid Function
-    Log Loss
-B) Tree Based
-  a. Decision Tree
-    Gini
-    Entropy
-  b. Random Forest
-    Ensemble
-    Reduces Variance
-  c. XGBoost
-    Gradient Boost
-    Regularized
-C) Distance Based
-  KNN: Lazy learner / Sensitive to scale
-D) Margin Based
-  Support Vector Machines: Maximizes margin / Kernel trick
-E) Clustering
-  KMeans: Minimize within cluster variance / requires K
-  DBScan: Density based
+1. **Linear**
+       - Linear Regression
+            - Loss: MSE
+        - Logistic Regression
+            - Sigmoid Function
+            - Log Loss
+
+2. **Tree Based**
+        - Decision Tree
+            - Gini
+            - Entropy
+        - Random Forest
+            - Ensemble
+            - Reduces Variance
+        - XGBoost
+            - Gradient Boost
+            - Regularized
+
+3. **Distance Based**
+        - KNN:
+            - Lazy learner /
+            - Sensitive to scale
+
+4. **Margin Based**
+        - Support Vector Machines:
+            - Maximizes margin /
+            - Kernel trick
+
+6. **Clustering**
+        - KMeans: Minimize within cluster variance / requires K
+        - DBScan: Density based
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
