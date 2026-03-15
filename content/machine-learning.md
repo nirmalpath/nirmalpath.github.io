@@ -53,34 +53,34 @@
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### Core Algorithm
 1. **Linear**
-       - Linear Regression
-            - Loss: MSE
-        - Logistic Regression
-            - Sigmoid Function
-            - Log Loss
+    - Linear Regression
+        - Loss: MSE
+    - Logistic Regression
+        - Sigmoid Function
+        - Log Loss
 
-2. **Tree Based**
-        - Decision Tree
-            - Gini
-            - Entropy
-        - Random Forest
-            - Ensemble
-            - Reduces Variance
-        - XGBoost
-            - Gradient Boost
-            - Regularized
+3. **Tree Based**
+    - Decision Tree
+        - Gini
+        - Entropy
+    - Random Forest
+        - Ensemble
+        - Reduces Variance
+    - XGBoost
+        - Gradient Boost
+        - Regularized
 
-3. **Distance Based**
-        - KNN:
-            - Lazy learner /
-            - Sensitive to scale
+4. **Distance Based**
+    - KNN:
+        - Lazy learner /
+        - Sensitive to scale
 
-4. **Margin Based**
-        - Support Vector Machines:
-            - Maximizes margin /
-            - Kernel trick
+5. **Margin Based**
+    - Support Vector Machines:
+        - Maximizes margin /
+        - Kernel trick
 
 6. **Clustering**
-        - KMeans: Minimize within cluster variance / requires K
-        - DBScan: Density based
+    - KMeans: Minimize within cluster variance / requires K
+    - DBScan: Density based
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
