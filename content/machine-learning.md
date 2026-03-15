@@ -84,3 +84,96 @@
     - KMeans: Minimize within cluster variance / requires K
     - DBScan: Density based
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Bias Variance Tradeoff
+1. Bias
+    - Underfitting / Too simple
+2. Variance
+    - Overfitting / Too complex
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Evaluation Metrics
+1. Regression
+    - MAE / MSE / RMSE / R*R
+      
+2. Classification
+    - Confusion Matrix
+        - TN / TP / FP / FN
+    - Metrics
+        - Accuracy
+        - Precision = TP/ (TP+FP)
+        - Recall = TP / (TP+FN)
+        - F1 score
+        - ROC-AUC
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Cross Validation
+1. Train/test split
+2. K-fold CV
+3. Stratified K-fold
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Regularization
+1. L1: sparse
+2. L2: shrinks weight / smooth
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Feature Engineering
+1. Scaling
+    - Standardization
+    - Min/max
+3. Encoding
+    - One hot / lable
+5. Handling Missing
+    - Mean/Median
+    - Model based
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Gradient Descent
+1. Types
+    - Batch
+    - Stochastic
+    - Mini-batch
+3. Learning Rate
+    - Small: slow
+    - Large: diverge
+    - 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Overfitting Fixes
+1. More data
+2. Regularization
+3. Drop features
+4. Early stopping
+5. Pruning (trees)
+6. Ensembling
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Ensemble Methods
+1. Bagging
+    - Reduce variance
+2. Boosting
+    - Reduce bias
+3. Stacking
+    - Meta Model
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Model Selection Flow
+1. Understanding problem type
+2. Clean data
+3. Baseline model
+4. Cross validate
+5. Tune hyper parms
+6. Evaluate
+7. Interpret
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Common Interview Questions
+1. Curse of dimensionality
+2. Multi-collinearity
+3. Feature Importance
+4. SHAP values
+5. ROC vs PR curve
+6. Class imbalance handling
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Production ML Checklist
+1. Monitoring Drift
+2. Re-training pipeline
+3. Feature Store
+4. Model versioning
+5. Latency constraints
+6. A/B Testing
+
+
+
+
