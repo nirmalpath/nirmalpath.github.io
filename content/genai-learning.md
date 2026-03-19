@@ -1,57 +1,171 @@
-# Machine Learning Notes
+# GenAI Notes
 
 ## Topics
+- What
+- Model Types
+- Transformer Architecture
+- Training Pipeline
+- Key Techniques
+- Inference Controls
+- Hallucination
+- Evaluation
+- Cost Optimization
+- Risks
+- Enterprise GenAI Architecture
+- Advanced Topics
+- When not to use
 
-- [Go to Accuracy](#accuracy)
-- Types
-- Core Algorithm
-- Bias-Variance Tradeoff
-- Evaluation Metrics
-- Cross Validation
-- Regularization
-- Feature Engineering
-- Gradient Descent
-- Overfitting Fixes
-- Ensemble Models
-- Model Selection
-- Production Checklist
-- Common Interview Questions
+### What
+- New content
+- Learn P(data) or P(O/input)
+  
+### Model Types
+- Auto regressive (text)
+    - Next token sequentially
+    - Exmaples
+      - GPT
+      - LLaMA
+      - Claude
+    - Uses
+      - Chatbots
+      - Codegen
+      - QnA
+      - Agents
+- Diffusion (image/video)
+    - Gradually de-noise into structure image
+    - Examples
+      - Stable diffusion
+      - DALL-E
+    - Uses
+      - Text to image
+      - Image editing
+      - Design gen
+- GANs (older GenAI)
+    - Generator vs discriminator
+    - Example
+      - Adversarial network
+    - Uses
+      - Synthetic data
+      - Deep fake
+- VAEs
+    - Probabilistic latent variable
+    - Uses
+      - Representational learning
+      - Controlled generation
 
-### Types
-1. Supervised
-- Regression
-- Classification
+### Transformer Architecture (text gen core)
+- Components
+    - Self attention
+    - Multi head
+    - Feed forward layer
+    - Layer norm
+    - Residual connections
 
-2. Unsupervised
-- Clustering
-- Dimension Reduction
-- Association Rules
-<div style="margin-left:120px;">
-Market Basket Analysis
-</div>
+### Training Pipeline
+- Pre-training
+    - Internet scale data
+    - Self-supervised learning
+- Fine tuning
+    - Instruction
+    - Domain
+- Alignment
+    - RLHF
+    - Constitutional AI
+### Key Techniques
+- Prompt
+    - Zero shot
+    - Few shot
+    - Chain of thought
+    - Role prompting
+    - Structure output prompting
+- RAG
+    - External knowledge via vector db
+- Tool calling
+    - Query API's
+    - Run code
+    - Access databases
+- Agents
+    - Iterative reasoning + action loop
+### Inference Controls
+- Temp
+    - Creativity
+- Top-k
+    - Limit candidates
+- Top-p
+    - Nucleus sampling
+- Max Tokens
+    - Lenght
+- Presence Penalty
+    - Reduce repetition
+      
+### Hallucination
+- Why
+    - Probabilistic gen
+    - Weak context
+    - Ambigous prompts
+      
+- Mitigation
+    - RAG
+    - Guardrails
+    - Output validation
+    - Lower temp
+    - Constrained decoding
+      
+### Evaluation
+- Automatic
+    - BLEU
+    - ROUGE
+    - Perplexity
+    - Exact match
+- Human
+    - Helpfullness
+    - Coherence
+    - Safety
+    - Factuality
+- Enterprise
+    - Cost per request
+    - Latency
+    - Task completion rate
+  
+### Cost Optimization
+- Smaller Models
+- Prompt compressor
+- Cache embeddings
+- Batch inference
+- Quantization
 
+### Risks
+- Hallucination
+- Prompt Injection
+- Data Leakage
+- Bias
+- Copyright Risk
+- Over Automation
 
-### Core Algorithm
-A) Linear
-  a. Linear Regression
-    Loss: MSE
-  b. Logistic Regression
-    Sigmoid Function
-    Log Loss
-B) Tree Based
-  a. Decision Tree
-    Gini
-    Entropy
-  b. Random Forest
-    Ensemble
-    Reduces Variance
-  c. XGBoost
-    Gradient Boost
-    Regularized
-C) Distance Based
-  KNN: Lazy learner / Sensitive to scale
-D) Margin Based
-  Support Vector Machines: Maximizes margin / Kernel trick
-E) Clustering
-  KMeans: Minimize within cluster variance / requires K
-  DBScan: Density based
+### Enterprise GenAI Architecture
+- User
+- API gateway
+- Orchestrator
+- LLM
+- Tool Layer
+- Data systems
+- Controls
+    - RBAC
+    - Audit logging
+    - Cost Monitoring
+    - Rate limiting
+    - Human in loop
+      
+### Advanced Topics
+- Mix of experts
+- Long context model
+- Multi-modal LLM
+- Speculative Decoding
+- Self-improvement agents
+- Synthetic Data Gen
+
+### When not to use
+- Deterministic
+- Strict compliance
+- Real-time
+- Tranditional ML works better
