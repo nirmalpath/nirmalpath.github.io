@@ -97,6 +97,47 @@
             3. Retrieve: Find relevant chunks
             4. Generator: Produces final answer
         - External knowledge via vector db
+        - Architecture
+            1. High level: 
+                - Data Sources --> Ingestion --> Chunking + Embeds --> Vector Database
+                - User query --> Retriever --> Reranker (fed by Vector DB) --> LLM --> Response
+            2. Components
+                - Data Ingestion: collect n pre-process data / challenges: noisy data n handling different formats
+                - Chunking Strategy: (critical / should balance recall vs precision)
+                    - Fixed Size: Simple but can break context
+                    - Semantic: Split by meaning / best for accuracy
+                    - Overlapping: Add overlap / prevents context loss
+                - Embedding: Converts text to vectors, used for similarity search. Domain specific embeddings improve results and normalize vectors for better similarity
+                - Vector Database: stores embeddings + metadata
+                - Retrieval Layer:
+                    - Dense: vector search / semantic similarity
+                    - Sparse: Keyword search / BM25
+                    - Hybrid: combine both / improves recall significantly
+                - Rerankind: refine results / uses cross encoders or LLM's / reorders top-k documents
+                - Generation (LLM): autoregressive models / 
+                - Post Processing: format output / add citations / filter unsafe content
+            3. Advanced design patterns:
+                - Query transformation: improve retrieval using query rewriting, multi-query generation or hypothetical answer gen (HyDE)
+                - Multi-hop RAG: break into steps, iteratively retrieve
+                - Memory + RAG: conversation history + retrieval / enables chat systems
+                - Evaluation layer: 
+                    - Metrics: Retrieval (recall@k n precision@k)
+                    - Generation: Faithfulness n answer relevance
+            4. Common Failure Modes
+                - Irrelevant chunks retrieved
+                - Hallucinations despite context
+                - Context overflow (token limit)
+                - Poor chunking
+            5. Optimization Levers
+                - Improve retrieval (better chunking, hybrid search, reranking)
+                - Improve generation (better prompts, context filtering, temp tuning)
+                - Improve latency (cache embeddings, reduce top-k, use smaller models)
+            6. Real-world architecture
+                - Data pipelines (batch + streaming)
+                - Access control (doc level security)
+                - Observability (logs, trace)
+                - Feedback loop (human)
+        
         - Uses: chat with PDFs / Enterprise knowledge assistants / dev copilot / medical-legal assistants
         - RAG vs Fine-tuning
             1. Data Update: Easy    |    Hard
