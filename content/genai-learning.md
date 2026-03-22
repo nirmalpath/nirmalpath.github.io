@@ -84,8 +84,25 @@
         - Chain of thought
         - Role prompting
         - Structure output prompting
-    - RAG
+    - RAG (Retrieval Augmented Generation): Architecture that combines retrieval (search) with generation (LLMs) to produce more accurate and grounded responses. Sits above models n orchestrates them.
+        - Why RAG?
+            - Otherwise LLM's hallucinate and are limited to training data
+            - Uses more current data, accurate n explainable n works with private enterprise data
+        - Steps
+            1. Retrieval: fetch relevant data from docs, databases, knowledge bases
+            2. Generation: feed retrieved context into LLM and generate answers on the grounded data
+        - Components
+            1. Embedding Model: converts text to vectors
+            2. Vector Database: stores embeddings / Examples; FAISS, Pinecone
+            3. Retrieve: Find relevant chunks
+            4. Generator: Produces final answer
         - External knowledge via vector db
+        - Uses: chat with PDFs / Enterprise knowledge assistants / dev copilot / medical-legal assistants
+        - RAG vs Fine-tuning
+            1. Data Update: Easy    |    Hard
+            2. Cost: Lower    |    Higher
+            3. Latency: Slighly higher    |    Lower
+            4. Knowledge control: High    |    Medium
     - Tool calling
         - Query API's
         - Run code
