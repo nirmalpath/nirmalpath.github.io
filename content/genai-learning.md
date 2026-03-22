@@ -137,7 +137,93 @@
                 - Access control (doc level security)
                 - Observability (logs, trace)
                 - Feedback loop (human)
-        
+        - Clean system design
+                          ┌──────────────────────┐
+                          │     Data Sources     │
+                          │ PDFs | DB | APIs     │
+                          └─────────┬────────────┘
+                                    ↓
+                    ┌──────────────────────────────┐
+                    │     Ingestion Pipeline       │
+                    │ Parse | Clean | Deduplicate  │
+                    └─────────┬────────────────────┘
+                              ↓
+                    ┌──────────────────────────────┐
+                    │   Chunking & Enrichment      │
+                    │ Semantic + Metadata Tags     │
+                    └─────────┬────────────────────┘
+                              ↓
+                    ┌──────────────────────────────┐
+                    │   Embedding Generation       │
+                    │   (Embedding Model)          │
+                    └─────────┬────────────────────┘
+                              ↓
+                    ┌──────────────────────────────┐
+                    │     Vector Database          │
+                    │  + Metadata Index            │
+                    └─────────┬────────────────────┘
+
+
+    ═══════════════════════ ONLINE QUERY FLOW ═══════════════════════
+
+
+            User Query
+                ↓
+            ┌──────────────────────────────┐
+            │      API Gateway Layer       │
+            │ Auth | Rate Limit | Logging  │
+            └──────────────┬───────────────┘
+                           ↓
+            ┌──────────────────────────────┐
+            │   Query Processing Layer     │
+            │ Rewrite | Expand | Filter    │
+            └──────────────┬───────────────┘
+                           ↓
+            ┌──────────────────────────────┐
+            │     Retrieval Layer          │
+            │ Hybrid Search (Dense+Sparse) │
+            └──────────────┬───────────────┘
+                           ↓
+            ┌──────────────────────────────┐
+            │       Reranker Layer         │
+            │   Cross-Encoder / LLM        │
+            └──────────────┬───────────────┘
+                           ↓
+            ┌──────────────────────────────┐
+            │     Context Builder          │
+            │ Top-K | Dedup | Compression  │
+            └──────────────┬───────────────┘
+                           ↓
+            ┌──────────────────────────────┐
+            │     LLM Generation Layer     │
+            │ Prompt + Context + Query     │
+            └──────────────┬───────────────┘
+                           ↓
+            ┌──────────────────────────────┐
+            │   Post-processing Layer      │
+            │ Citations | Guardrails       │
+            └──────────────┬───────────────┘
+                           ↓
+                       Final Answer
+            
+            
+            ═══════════════════════ SUPPORTING LAYERS ═══════════════════════
+            
+            
+            ┌──────────────────────────────────────────────────────────────┐
+            │ Observability & Evaluation                                  │
+            │ Logs | Metrics | Traces | Feedback | Quality (RAG evals)     │
+            └──────────────────────────────────────────────────────────────┘
+            
+            ┌──────────────────────────────────────────────────────────────┐
+            │ Security & Access Control                                   │
+            │ User Permissions | Document-level Filtering | Compliance     │
+            └──────────────────────────────────────────────────────────────┘
+            
+            ┌──────────────────────────────────────────────────────────────┐
+            │ Performance Optimization                                    │
+            │ Caching | Batching | Async Calls | Token Optimization        │
+            └──────────────────────────────────────────────────────────────┘
         - Uses: chat with PDFs / Enterprise knowledge assistants / dev copilot / medical-legal assistants
         - RAG vs Fine-tuning
             1. Data Update: Easy    |    Hard
