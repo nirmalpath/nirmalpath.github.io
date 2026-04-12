@@ -1,4 +1,6 @@
 # Deep Learning Notes
+## Mindmap
+![DeepL MindMap](../content/Deep-Learning.png)
 
 ## Topics
 
