@@ -1,4 +1,6 @@
 # Machine Learning Notes
+## Mindmap
+![AgenticAI MindMap](../content/Agentic-AI.png)
 
 ## Topics
 
