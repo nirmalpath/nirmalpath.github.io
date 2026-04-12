@@ -1,6 +1,6 @@
 # GenAI Notes
 ## Mindmap
-![GenAI MindMap](content/Gen-AI.png)
+![GenAI MindMap](../content/Gen-AI.png)
 
 ## Topics
 - What
