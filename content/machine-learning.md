@@ -1,6 +1,6 @@
 # Machine Learning Notes
 ## Mindmap
-![ML MindMap](content/ML.png.png)
+![ML MindMap](../content/ML.png.png)
 
 ## Topics
 
