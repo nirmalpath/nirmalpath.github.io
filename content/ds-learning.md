@@ -1,4 +1,6 @@
 # Machine Learning Notes
+## Mindmap
+![DataScience MindMap](../content/DataScience.png)
 
 ## Topics
 
