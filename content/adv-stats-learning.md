@@ -1,4 +1,6 @@
 # Advanced Statistics Notes
+## Mindmap
+![AdvStats MindMap](../content/Advanced-Stats.png)
 
 ## Topics
 
