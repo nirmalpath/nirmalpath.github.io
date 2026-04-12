@@ -1,4 +1,6 @@
 # Machine Learning Notes
+## Mindmap
+![LLM MindMap](../content/LLM.png)
 
 ## Topics
 
