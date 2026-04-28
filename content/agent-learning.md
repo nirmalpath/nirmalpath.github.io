@@ -1,59 +1,28 @@
-# Machine Learning Notes
+# Agentic AI Notes
 ## Mindmap
 ![AgenticAI MindMap](../content/Agentic-AI.png)
 
 ## Topics
 
-- [Go to Accuracy](#accuracy)
-- Types
-- Core Algorithm
-- Bias-Variance Tradeoff
-- Evaluation Metrics
-- Cross Validation
-- Regularization
-- Feature Engineering
-- Gradient Descent
-- Overfitting Fixes
-- Ensemble Models
-- Model Selection
-- Production Checklist
-- Common Interview Questions
+- Place Holder
 
-### Types
-1. Supervised
-- Regression
-- Classification
+--------------------------------------------Details--------------------------------------
+### Design Patterns
+    1) ReAct
+        - Definition: Reason and Act is a framework that allows LLMs to perform complex, multi-step tasks by interleaving reasoning and actions in a continuous loop. Introduced in 2022, this pattern moves text generation into the realm of autonomous decision making.
 
-2. Unsupervised
-- Clustering
-- Dimension Reduction
-- Association Rules
-<div style="margin-left:120px;">
-Market Basket Analysis
-</div>
+        - ReAct Loop: 
+          > Structured cycle that mimics human problem solving.
+          > Thought (Reasoning): Breaks down into smaller sub-tasks, identifies missing information and what tool to use next.
+          > Action (Acting): Executes specific action based on the previous step
+          > Observation (Result): Observes the outcome of its action, this info is passed back to the model for the next reasoning step.
+          > Iteration: This loop repeats until the agent decides it has enough info to provide a final answer.
 
+        - Benefits
+          > Reduced hallucinations: Forcing the model to validate against real world data rather than guessing the answer
+          > Dynamic adapatability: Unlike plan n execute, ReAct agents can pivot execution at real time.
+          > Explainability: Trace exact logic and audit trail every decision, helping developers de-bug.
 
-### Core Algorithm
-A) Linear
-  a. Linear Regression
-    Loss: MSE
-  b. Logistic Regression
-    Sigmoid Function
-    Log Loss
-B) Tree Based
-  a. Decision Tree
-    Gini
-    Entropy
-  b. Random Forest
-    Ensemble
-    Reduces Variance
-  c. XGBoost
-    Gradient Boost
-    Regularized
-C) Distance Based
-  KNN: Lazy learner / Sensitive to scale
-D) Margin Based
-  Support Vector Machines: Maximizes margin / Kernel trick
-E) Clustering
-  KMeans: Minimize within cluster variance / requires K
-  DBScan: Density based
+        - Popular Frameworks
+          > LangChain | CrewAI | LlamaIndex | AutoGen
+          
