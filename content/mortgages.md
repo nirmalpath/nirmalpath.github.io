@@ -9,7 +9,7 @@
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### Architecture
     ## Diagram
-        ![Mortgage Arch](../content/Agent Arch.png) 
+        ![Mortgage Arch](../content/Agent_Arch.png) 
 
     That's the architecture — five layers, top to bottom: channels feed an orchestrator that delegates to four specialist agents, backed by a shared data & knowledge layer (document store, vector DB, knowledge graph, rules engine), wired into your core banking/LOS and external APIs, with security and compliance wrapping everything as a cross-cutting concern.
     A few design notes worth calling out:
