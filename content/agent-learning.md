@@ -1,5 +1,6 @@
 # Agentic AI Notes
 ## Mindmap
+![AgenticAI MindMap](../content/AgenticAI-CheatS.png)
 ![AgenticAI MindMap](../content/Agentic-AI.png)
 
 ## Topics
