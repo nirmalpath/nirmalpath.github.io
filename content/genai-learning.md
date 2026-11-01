@@ -1,4 +1,6 @@
 # GenAI Notes
+![GenAI CheatSheet](../content/GenAI-Cheat-Sheet.png)
+
 ## Mindmap
 ![GenAI MindMap](../content/Gen-AI.png)
 
