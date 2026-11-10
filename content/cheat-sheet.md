@@ -1,7 +1,8 @@
-# AI Learning Cheat Sheet
+# Latest Topics to Track
 
 ## Foundation Models & LLM
-![GenAI MindMap](../content/Gen-AI.png)
+![GenAI MindMap](../content/Foundation-ModelsnLLMs.png)
+
 
 ## Agentic AI
 ![AgenticAI MindMap](../content/AgenticAI-CheatS.png)
