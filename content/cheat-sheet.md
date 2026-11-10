@@ -1,7 +1,7 @@
 # Latest Topics to Track
 
 ## Foundation Models & LLM
-![GenAI MindMap](../content/Foundation-ModelsnLLMs.png)
+![Foundation_Models](../content/Foundation-ModelsnLLMs.png)
 
 
 ## Agentic AI
@@ -13,6 +13,8 @@
 
 
 ## AI Coding n SDLC
+![AI_in_SDLC](../content/AI-in-SDLC.png)
+
 
 ## AI Engineering n LLM Ops
 
