@@ -7,7 +7,10 @@
 ## Agentic AI
 ![AgenticAI MindMap](../content/AgenticAI-CheatS.png)
 
+
 ## RAG n Knowledge Systems
+![RAGnKS MindMap](../content/RAGnKS.png)
+
 
 ## AI Coding n SDLC
 
