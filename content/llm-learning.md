@@ -1,5 +1,6 @@
 # Machine Learning Notes
-## Mindmap
+## Notes
+![LLM MindMap](../content/Foundation-ModelsnLLMs.png)
 ![LLM MindMap](../content/LLM.png)
 
 ## Topics
